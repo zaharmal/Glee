@@ -20,6 +20,7 @@
     }
 		&__item-link {
       color: $menu;
+      font-family: Roboto;
       font-size: 15px;
       line-height: 12px;
     }
@@ -68,21 +69,91 @@
 		&__top {
       padding: 100px 0 100px;
       border-bottom: 1px solid #dae4e9;
+      display: flex;
+      font-size: 14px;
+      line-height: 24px;
     }
-		&__top-item {}
-		&__top-adress {}
-		&__top-title {}
-		&__top-list {}
-		&__top-link {}
-		&__top-text {}
-		&__top-form {}
-		&__top-form-input {}
-		&__top-form-btn {}
-		&__bottom {}
-		&__bottom-copy {}
+    &__logo {
+      display: block;
+    }
+    &__top-item--contact {
+      width: 200px;
+      margin-right: 100px;
+    }
+    &__top-item--services {
+      width: 200px;
+      margin-right: 130px;
+    }
+    &__top-item--form {
+      max-width: 270px;
+      margin-left: 185px;
+    }
+		&__top-adress,
+    &__top-phone,
+    &__top-email {
+      display: block;
+      margin-bottom: 10px;
+    }
+		&__top-title {
+      margin-bottom: 17px;
+      color: #1f2044;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 3;
+    }
+		&__top-link {
+      display: block;
+      margin-bottom: 10px;
+    }
+		&__top-text {
+      margin-bottom: 33px;
+    }
+		&__top-form--input {
+      max-width: 170px;
+      background-color: #fef7f0;
+      border: none;
+      padding: 15px;
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 12px;
+      &::placeholder {
+        color: $content;
+      }
+    }
+		&__top-form--btn {
+      border: none;
+      background-color: $btn;
+      color: #fff;
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 10px;
+      width: 97px;
+      cursor: pointer;
+    }
+		&__bottom {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+		&__bottom-copy {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 32px;
+    }
 		&__menu {}
-		&__menu-list {}
-		&__menu-item {}
+		&__menu-list {
+      display: flex;
+    }
+		&__menu-item {
+      & + .footer__menu-item {
+        margin-left: 30px;
+      }
+      span {
+        margin-left: 15px;
+      }
+    }
 		&__menu-link {}
 }
 @import 'media';
