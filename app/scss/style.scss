@@ -41,7 +41,7 @@
   }
   &__nav-accent {
     display: flex;
-    background-color: #fcd7b6;
+    background-color: $slider;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 17px;
@@ -66,94 +66,166 @@
 }
 
 .footer {
-		&__top {
-      padding: 100px 0 100px;
-      border-bottom: 1px solid #dae4e9;
-      display: flex;
-      font-size: 14px;
-      line-height: 24px;
+	&__top {
+    padding: 100px 0 100px;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__logo {
+    display: block;
+  }
+  &__top-item--contact {
+    width: 200px;
+    margin-right: 100px;
+  }
+  &__top-item--services {
+    width: 200px;
+    margin-right: 130px;
+  }
+  &__top-item--form {
+    max-width: 270px;
+    margin-left: 185px;
+  }
+	&__top-adress,
+  &__top-phone,
+  &__top-email {
+    display: block;
+    margin-bottom: 10px;
+  }
+	&__top-title {
+    margin-bottom: 17px;
+    color: #1f2044;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 3;
+  }
+	&__top-link {
+    display: block;
+    margin-bottom: 10px;
+  }
+	&__top-text {
+    margin-bottom: 33px;
+  }
+	&__top-form--input {
+    max-width: 170px;
+    background-color: #fef7f0;
+    border: none;
+    padding: 15px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    &::placeholder {
+      color: $content;
     }
-    &__logo {
-      display: block;
+  }
+	&__top-form--btn {
+    border: none;
+    background-color: $btn;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 10px;
+    width: 97px;
+    cursor: pointer;
+  }
+	&__bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+	&__bottom-copy {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 32px;
+  }
+	&__menu-list {
+    display: flex;
+  }
+	&__menu-item {
+    & + .footer__menu-item {
+      margin-left: 30px;
     }
-    &__top-item--contact {
-      width: 200px;
-      margin-right: 100px;
+    span {
+      margin-left: 15px;
     }
-    &__top-item--services {
-      width: 200px;
-      margin-right: 130px;
+  }
+}
+
+.slider {
+  background-color: $slider;
+}
+.top-slider {
+  &__container {
+    max-width: 1434px;
+  }
+	&__inner {}
+	&__item {
+    padding-top: 97px;
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    padding-left: 120px;
+    padding-top: 125px;
+  }
+	&__title {
+    max-width: 415px;
+    font-family: Roboto;
+    font-size: 72px;
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
+	&__text {
+    max-width: 370px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+	&__link {
+    background-color: $btn;
+    color: #fff;
+    padding: 20px 100px 20px 25px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 10px;
+      background-image: url(../images/icons/arrow-right.png);
+      top: 25px;
+      left: 160px;
+      right: 0;
+      bottom: 0;
     }
-    &__top-item--form {
-      max-width: 270px;
-      margin-left: 185px;
-    }
-		&__top-adress,
-    &__top-phone,
-    &__top-email {
-      display: block;
-      margin-bottom: 10px;
-    }
-		&__top-title {
-      margin-bottom: 17px;
-      color: #1f2044;
-      font-family: Roboto;
-      font-size: 16px;
-      line-height: 3;
-    }
-		&__top-link {
-      display: block;
-      margin-bottom: 10px;
-    }
-		&__top-text {
-      margin-bottom: 33px;
-    }
-		&__top-form--input {
-      max-width: 170px;
-      background-color: #fef7f0;
-      border: none;
-      padding: 15px;
-      font-family: Roboto;
-      font-weight: 700;
-      font-size: 12px;
-      &::placeholder {
+  }
+	.slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    padding-bottom: 45px;
+    li {
+      button {
+        font-family: Roboto;
+        font-size: 11px;
+        line-height: 9px;
+        padding: 13px;
+        border: none;
+        border-radius: 50%;
         color: $content;
+        opacity: .8;
+        margin-right: 10px;
+      }
+      &.slick-active {
+        button {
+          opacity: 1;
+        }
       }
     }
-		&__top-form--btn {
-      border: none;
-      background-color: $btn;
-      color: #fff;
-      font-family: Roboto;
-      font-size: 14px;
-      line-height: 21px;
-      padding: 10px;
-      width: 97px;
-      cursor: pointer;
-    }
-		&__bottom {
-      height: 90px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-		&__bottom-copy {
-      font-family: Roboto;
-      font-size: 14px;
-      line-height: 32px;
-    }
-		&__menu {}
-		&__menu-list {
-      display: flex;
-    }
-		&__menu-item {
-      & + .footer__menu-item {
-        margin-left: 30px;
-      }
-      span {
-        margin-left: 15px;
-      }
-    }
-		&__menu-link {}
+  }
 }
 @import 'media';
